@@ -21,9 +21,11 @@
       <p>Total: ${{ total }}</p>
       <button @click="checkout">Checkout</button>
     </div>
+    <!-- เพิ่มปุ่มใหม่ -->
+    <button @click="newButtonAction">New Button</button>
   </div>
 </template>
- 
+
 <script>
 export default {
   name: 'App',
@@ -65,10 +67,13 @@ export default {
       alert(`Total amount: $${this.total}`);
       this.cart = [];
     },
+    newButtonAction() {
+      alert('New Button Clicked!');
+    },
   },
 };
 </script>
- 
+
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -76,11 +81,11 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
- 
+
 .product-list, .cart {
   margin: 20px;
 }
- 
+
 button {
   margin-left: 10px;
 }
